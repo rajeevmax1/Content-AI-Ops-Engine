@@ -24,6 +24,20 @@ export const researchVault = defineType({
         ]
       }
     }),
+   // --- THE KNOWLEDGE GRAPH RELATIONSHIP FIELD ---
+    defineField({
+      name: 'relatedInsights',
+      title: 'Related Insights (Knowledge Graph)',
+      type: 'array',
+      description: 'Connect this atomic fact to other insights in your vault.',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'researchVault' }], // Points back to itself to create the web
+        }
+      ],
+    }),
+    // ----------------------------------------------
     defineField({
       name: 'content',
       title: 'The Insight (Atomic)',
