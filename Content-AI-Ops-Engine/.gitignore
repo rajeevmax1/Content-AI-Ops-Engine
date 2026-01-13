@@ -1,0 +1,16 @@
+# Node dependencies (The biggest ones!)
+node_modules/
+studio/node_modules/
+
+# OS specific files
+.DS_Store
+
+# Sanity build files
+studio/dist/
+studio/.sanity/
+
+# Environment variables (Sensitive API keys)
+.env
+.env.local
+.env.*.local
+studio/.env
